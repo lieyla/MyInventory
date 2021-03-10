@@ -3,19 +3,21 @@ import './Suits.css';
 class Suits extends Component{
 
     render (props){
-    let StartCount= this.props.StartCount;
+        let mark=this.props.mark;
+    let currentCount= this.props.currentCount;
     let IdealCount= this.props.IdealCount;
-    let difference= props.IdealCount - props.StartCount;
+    let difference= this.props.IdealCount - this.props.currentCount;
     return (
         <div className="Suits">
         <h2> Suits</h2>
+        <div><h3>mark {mark}</h3></div>
         <div>
-            <h3>StartCount: {StartCount}</h3>
+            <h3>currentCount {currentCount}</h3>
         </div>
         <div>
-            <h3>IdealCount:{IdealCount}</h3></div>
+            <h3>IdealCount {IdealCount}</h3></div>
             <div> 
-                <h3>difference:{difference}</h3>
+                <h3>difference {difference}</h3>
             </div>
 
     </div>
